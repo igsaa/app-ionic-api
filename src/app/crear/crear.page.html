@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img class="img-duoc" src="../../assets/img/logo_duoc-06.jpg" alt="">
+	<form class="form-crear" [formGroup]="formRegistro" (ngSubmit)="guardarUsuario()">
+		<ion-item lines="full">
+		  <ion-label position="floating">Usuario</ion-label>
+		  <ion-input [(ngModel)]="usuario" type="text" formControlName="usuario" ></ion-input>
+		</ion-item>
+	
+	
+		<ion-item lines="full">
+		  <ion-label position="floating">Contraseña</ion-label>
+		  <ion-input [(ngModel)]="password" type="password" formControlName="pass" ></ion-input>
+    </ion-item>
+    <ion-button class="bto-crear" color="tertiary"  expand="block" type="ngSubmit" >Crear Usuario</ion-button>
+	<ion-button color="medium"  expand="block" routerLink="/login" ><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+  </form>
+</ion-content>
